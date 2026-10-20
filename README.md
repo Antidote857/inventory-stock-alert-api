@@ -1,8 +1,16 @@
 # Inventory & Stock Alert API
 
+[![Java CI](https://github.com/Antidote857/inventory-stock-alert-api/actions/workflows/ci.yml/badge.svg)](https://github.com/Antidote857/inventory-stock-alert-api/actions/workflows/ci.yml)
+
 A Java 21 and Spring Boot REST API for managing products, recording inventory movements, and identifying products that need restocking.
 
 Built as a backend portfolio project, it uses PostgreSQL for persistence, Flyway for database migrations, and optimistic locking to protect stock updates from concurrent changes.
+
+## API Preview
+
+Interactive Swagger documentation for products, stock movements, alerts, and inventory summaries.
+
+![Inventory API Swagger documentation](assets/swagger-ui.png)
 
 ## Features
 
@@ -362,6 +370,16 @@ Common errors:
 | 409 | `DATA_CONFLICT` | A database integrity constraint rejected the operation |
 | 500 | `INTERNAL_SERVER_ERROR` | Unexpected application failure |
 
+## Continuous Integration
+
+GitHub Actions builds the application and runs the test suite on pushes to
+`main` and pull requests targeting `main`.
+
+Each run uses Java 21 and a temporary PostgreSQL 18 database. The workflow
+runs `clean verify` through the Maven Wrapper.
+
+Workflow configuration: [ci.yml](.github/workflows/ci.yml).
+
 ## Automated Tests
 
 The suite currently contains 49 tests:
@@ -515,7 +533,6 @@ Authentication, deployment configuration, and operational hardening are required
 - Pagination and sorting options.
 - Database aggregate queries for summary calculations.
 - Authentication and role-based access.
-- CI automation for builds and tests.
 - Containerized development and test environments.
 - Additional integration tests for reporting and lifecycle operations.
 - A frontend dashboard.
