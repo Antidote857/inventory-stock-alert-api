@@ -14,7 +14,7 @@ public class OpenApiConfig {
         return new OpenAPI()
                 .info(new Info()
                         .title("Inventory & Stock Alert API")
-                        .version("1.0")
+                        .version("1.0.0")
                         .description("""
                                 REST API for managing products, recording stock
                                 movements, and identifying products needing restocking.

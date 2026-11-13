@@ -472,7 +472,7 @@ With the test database available and `TEST_DB_PASSWORD` set:
 With `DB_PASSWORD` set, start the packaged application:
 
 ```powershell
-java -jar .\target\inventory-stock-alert-api-0.0.1-SNAPSHOT.jar
+java -jar .\target\inventory-stock-alert-api-1.0.0.jar
 ```
 
 Stop any existing application instance first to free port 8080.
